@@ -1,0 +1,79 @@
+apply plugin: 'com.android.library'
+
+android {
+    compileSdkVersion rootProject.ext.android.compileSdkVersion
+    buildToolsVersion rootProject.ext.android.buildToolsVersion
+
+    defaultConfig {
+        minSdkVersion 14
+        targetSdkVersion rootProject.ext.android.compileSdkVersion
+
+        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+
+        ndk {
+            abiFilters 'armeabi', 'armeabi-v7a', 'arm64-v8a', 'x86', 'x86_64'//, "mips", "mips64"
+        }
+        externalNativeBuild {
+            cmake {
+                arguments '-DANDROID_PLATFORM=android-14',
+                        '-DANDROID_TOOLCHAIN=clang', '-DANDROID_STL=gnustl_static'
+            }
+        }
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled enable.toBoolean()
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+
+        debug {
+            minifyEnabled enable.toBoolean()
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+
+    externalNativeBuild {
+        cmake {
+            path "CMakeLists.txt"
+        }
+    }
+
+    sourceSets {
+        main {
+            jniLibs.srcDirs = ['libs']
+        }
+    }
+}
+
+dependencies {
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
+    implementation 'com.wms:logger:1.0.1'
+}
+
+ext {
+    package_userOrg = '' //  组织名或者用户名 不填默认用户名
+    package_repo = 'coreMaven' // bintray上的仓库名，就是我们在第二步中创建的仓库名字，如果package_userOrg设置的为组织名，那么这个仓库名得属于组织的
+    package_type = 'aar'  // 输出类型
+    package_group = 'com.proton.algorithm' // JCenter的GroupId
+    package_artifact = 'tempAlgorithm' // JCenter的ArtifactId
+    package_version = '1.0.1-alpha3'  // JCenter的VersionId
+    package_description = 'A tools for tempAlgorithm'
+
+    siteUrl = 'https://dl.bintray.com/yxf22/coreMaven'
+    gitUrl = 'https://github.com/yuxiongfeng92/tempAlgorithm'
+
+    //开发者信息
+    developerId = 'yu'
+    developerName = 'xiongfeng'
+    developerEmail = 'yuxiongfeng7@gmail.com'
+
+    //开源协议
+    licenseName = 'The Apache Software License, Version 2.0'
+    licenseUrl = 'http://www.apache.org/licenses/LICENSE-2.0.txt'
+    allLicenses = 'Apache-2.0'
+}
+tasks.withType(JavaCompile) {
+    options.encoding = "UTF-8"
+}
+apply from: './bintray.gradle'

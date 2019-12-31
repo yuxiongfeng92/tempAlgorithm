@@ -1,0 +1,76 @@
+# compiler: R8
+# compiler_version: 1.5.68
+# pg_map_id: 37b8756
+com.proton.temp.algorithm.AlgorithmManager -> com.proton.temp.algorithm.AlgorithmManager:
+    23:62:void <clinit>() -> <clinit>
+    64:66:void <init>(java.lang.String) -> <init>
+    151:156:void closeAlgorithm() -> closeAlgorithm
+    92:100:void doAlgorithm1_0(float) -> doAlgorithm1_0
+    111:121:void doAlgorithm1_5(float,long,int,int) -> doAlgorithm1_5
+    124:129:void doCallback(float,int,int,int,int) -> doCallback
+    132:132:com.proton.temp.algorithm.interfaces.AlgorithmListener getAlgorithmListener() -> getAlgorithmListener
+    162:162:int getFlag() -> getFlag
+    72:73:com.proton.temp.algorithm.AlgorithmManager getInstance(java.lang.String) -> getInstance
+    82:85:java.lang.String getVersion() -> getVersion
+    136:137:void setAlgorithmListener(com.proton.temp.algorithm.interfaces.AlgorithmListener) -> setAlgorithmListener
+    145:147:com.proton.temp.algorithm.AlgorithmManager setAlgorithmStatus(int) -> setAlgorithmStatus
+    140:141:com.proton.temp.algorithm.AlgorithmManager setPill(boolean) -> setPill
+com.proton.temp.algorithm.BuildConfig -> com.proton.temp.algorithm.a:
+    boolean DEBUG -> a
+    7:7:void <clinit>() -> <clinit>
+com.proton.temp.algorithm.bean.AlgorithmData -> com.proton.temp.algorithm.bean.AlgorithmData:
+    29:30:void <init>() -> <init>
+    32:38:void <init>(float,int,int,int,int) -> <init>
+    73:73:int getGesture() -> getGesture
+    49:49:int getMeasureStatus() -> getMeasureStatus
+    65:65:int getPercent() -> getPercent
+    41:41:float getProcessTemp() -> getProcessTemp
+    57:57:int getSample() -> getSample
+    77:78:void setGesture(int) -> setGesture
+    53:54:void setMeasureStatus(int) -> setMeasureStatus
+    69:70:void setPercent(int) -> setPercent
+    45:46:void setProcessTemp(float) -> setProcessTemp
+    61:62:void setSample(int) -> setSample
+com.proton.temp.algorithm.bean.TempImg -> com.proton.temp.algorithm.bean.TempImg:
+    25:43:void <init>() -> <init>
+    98:98:float getCurrentTemp() -> getCurrentTemp
+    74:74:int getDecline() -> getDecline
+    119:119:int getFirstStart() -> getFirstStart
+    82:82:int getPredInd() -> getPredInd
+    90:90:float getPredictedTemp() -> getPredictedTemp
+    58:58:int getStartInd() -> getStartInd
+    127:127:int getStatus() -> getStatus
+    66:66:int getStickCount() -> getStickCount
+    50:50:boolean isHandle() -> isHandle
+    102:103:void setCurrentTemp(float) -> setCurrentTemp
+    78:79:void setDecline(int) -> setDecline
+    123:124:void setFirstStart(int) -> setFirstStart
+    54:55:void setHandle(boolean) -> setHandle
+    86:87:void setPredInd(int) -> setPredInd
+    94:95:void setPredictedTemp(float) -> setPredictedTemp
+    62:63:void setStartInd(int) -> setStartInd
+    131:132:void setStatus(int) -> setStatus
+    70:71:void setStickCount(int) -> setStickCount
+    107:107:java.lang.String toString() -> toString
+com.proton.temp.algorithm.bean.TempResult -> com.proton.temp.algorithm.bean.TempResult:
+    6:6:void <init>() -> <init>
+    28:28:float getCurrentTemp() -> getCurrentTemp
+    60:60:int getGesture() -> getGesture
+    52:52:int getPercent() -> getPercent
+    36:36:int getSample() -> getSample
+    44:44:int getStatus() -> getStatus
+    32:33:void setCurrentTemp(float) -> setCurrentTemp
+    64:65:void setGesture(int) -> setGesture
+    56:57:void setPercent(int) -> setPercent
+    40:41:void setSample(int) -> setSample
+    48:49:void setStatus(int) -> setStatus
+com.proton.temp.algorithm.interfaces.AlgorithmListener -> com.proton.temp.algorithm.interfaces.AlgorithmListener:
+    10:10:void <init>() -> <init>
+    15:15:void onComplete(com.proton.temp.algorithm.bean.AlgorithmData) -> onComplete
+com.proton.temp.algorithm.utils.AlgorithmHelper -> com.proton.temp.algorithm.utils.AlgorithmHelper:
+    15:19:void <clinit>() -> <clinit>
+    12:12:void <init>() -> <init>
+com.proton.temp.algorithm.utils.ProtonAlgorithm -> com.proton.temp.algorithm.utils.ProtonAlgorithm:
+    13:13:void <init>() -> <init>
+    16:20:com.proton.temp.algorithm.bean.TempImg getTemp(java.util.List,com.proton.temp.algorithm.bean.TempImg) -> getTemp
+    25:25:com.proton.temp.algorithm.bean.TempResult getTemp(float,long,int,int,int,int,int) -> getTemp
