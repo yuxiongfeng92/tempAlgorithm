@@ -3,12 +3,12 @@
 -charset 'UTF-8'
 -classpath 'E:\\yxf\\config\\sdk\\platforms\\android-28\\android.jar'
 -d 'E:\\yxf\\workspace\\jcenter\\tempAlgorithm\\tempAlgorithm\\build\\docs\\javadoc'
--doctitle 'tempAlgorithm 1.0.1-alpha3 API'
+-doctitle 'tempAlgorithm 1.0.2-alpha7 API'
 -encoding 'UTF-8'
 -link 'http://docs.oracle.com/javase/7/docs/api'
 -quiet 
 -version 
--windowtitle 'tempAlgorithm 1.0.1-alpha3 API'
+-windowtitle 'tempAlgorithm 1.0.2-alpha7 API'
 'E:\\yxf\\workspace\\jcenter\\tempAlgorithm\\tempAlgorithm\\src\\main\\java\\com\\proton\\temp\\algorithm\\AlgorithmManager.java'
 'E:\\yxf\\workspace\\jcenter\\tempAlgorithm\\tempAlgorithm\\src\\main\\java\\com\\proton\\temp\\algorithm\\bean\\AlgorithmData.java'
 'E:\\yxf\\workspace\\jcenter\\tempAlgorithm\\tempAlgorithm\\src\\main\\java\\com\\proton\\temp\\algorithm\\bean\\TempImg.java'
