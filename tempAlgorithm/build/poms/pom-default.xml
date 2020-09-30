@@ -4,7 +4,7 @@
   <modelVersion>4.0.0</modelVersion>
   <groupId>com.proton.algorithm</groupId>
   <artifactId>tempAlgorithm</artifactId>
-  <version>1.0.2-alpha7</version>
+  <version>1.0.2-alpha9</version>
   <packaging>aar</packaging>
   <name>tempAlgorithm</name>
   <description>A tools for tempAlgorithm</description>

@@ -57,11 +57,11 @@ ext {
     package_type = 'aar'  // 输出类型
     package_group = 'com.proton.algorithm' // JCenter的GroupId
     package_artifact = 'tempAlgorithm' // JCenter的ArtifactId
-    package_version = '1.0.2-alpha7'  // JCenter的VersionId
+    package_version = '1.0.2-alpha9'  // JCenter的VersionId
     package_description = 'A tools for tempAlgorithm'
 
     siteUrl = 'https://dl.bintray.com/yxf22/coreMaven'
-    gitUrl = 'https://github.com/yuxiongfeng92/tempAlgorithm'
+    gitUrl = 'https://github.com/yuxiongfeng92/tempAlgorithm.git'
 
     //开发者信息
     developerId = 'yu'
